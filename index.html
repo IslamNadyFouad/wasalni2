@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Linear by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>-->
+		<link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">
+		
+			
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			
+		<link rel="stylesheet" type="text/css" href="css/formSearchCss/style2.css"><!-- Form Search Style -->
+		<link rel="stylesheet" type="text/css" href="css/formSearchCss/dropStyle.css">
+		<link href="css/formSearchCss/datePickerStyle.css" rel="stylesheet"/>
+	
+		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="css/loginForm2/loginForm2.css" rel="stylesheet"/>
+		<link href="css/registerationForm/registerationForm.css" rel="stylesheet"/>
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+	<body class="homepage">
+
+	<!-- Header -->
+		<div id="header">
+			<div id="nav-wrapper"> 
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="active"><a href="index.html">الصفحة الرئيسية  <span class="glyphicon glyphicon-home "</span></a></li>
+						<li><a id="monthBtn">الحجز الشهري <i class="glyphicon glyphicon-book"></i></a></li>
+						<li><a id="accountBtn"> حسابي <img src="icon.png" width="30px" height="30px"></a></li>
+					</ul>
+				</nav>
+			</div>
+		
+		<form action="DailyBooking.html" method="GET">
+			<div class="container"> 
+				
+			<div class="searchForm"><!-- This Is Search Form -->
+					<div class="mainSearchForm">
+					<br>
+          <p>البحث عن رحلة اتوبيس</p>
+          <div class="chooseWay"><!-- choose way-->
+             <div  class="wayGo" id="w1" style="cursor:pointer;">ذهاب فقط</div>
+             <div class="wayReturn" id="w2">ذهاب وعودة</div>
+				     	</div>
+          <br><br>
+			
+				  <div class="container2"><!-- Text Input 1-->
+					    <span class="spanClass">الي</span>
+						  <div class="contOfText">
+									<div class="TextClick2" style="height:100%;">
+										 <i class="glyphicon glyphicon-chevron-down arrowImage2" ></i>
+										 <span class="txt" id="ViewTextTo"></span>
+									</div>
+									<div class="textDetails" id="TextTo">
+										  <ul class="listOfRegion" id="listOfDestination">
+												
+											</ul>
+									</div>
+							</div>
+					</div><!-- end of  container2-->
+              
+				  <div class="container2"><!-- Text Input 2-->
+							<span class="spanClass">من</span>
+							<div class="contOfText">
+									<div class="TextClick1" style="height:100%;">
+												  <i class="glyphicon glyphicon-chevron-down arrowImage2" ></i>
+													<span class="txt" id="ViewTextFrom"></span>
+									</div>
+									<div class="textDetails" id="TextFrom">
+											<ul class="listOfRegion" id="listOfSource">
+												
+											</ul>
+									</div>
+							</div>
+					</div><!-- end of  container2-->
+ 
+       <br><br>
+								<div class="container2" id="DateIdVisible">
+										<span  class="spanClass">تاريخ العودة</span>
+										<div class="contOfDate">
+																				<div class="dateClick" style="height:100%;" id="dateClick2"><span class="glyphicon glyphicon-calendar dateImage"></span>
+																				<span class="dateInp" id="dateInp2">2019 / 03 / 05</span></div>
+																				<div class="dateDetails" id="dateDetails2">
+																								<div class="headOfDate">
+																												<i class="glyphicon glyphicon-chevron-left dateImage1 back1"></i>
+																												<span id="monthId2">m </span><span id="yearId2"></span>
+																												<i class="glyphicon glyphicon-chevron-right dateImage1 back2"></i>
+																								</div>
+																								<div class="titleOfDate">
+																												<ul class="listOfDay">
+																																<li>أحد</li>
+																																<li>اثنين</li>
+																																<li>ثلاثاء</li>
+																																<li>اربعاء</li>
+																																<li>خميس</li>
+																																<li>جمعه</li>
+																																<li>سبت</li>
+																												</ul>
+																								</div>
+																								<div class="tableOfDate">
+																												<table class="tb" id="tb2">
+																																<tr class="tr0"><td class="td" id="td00">2</td><td class="td" id="td01">2</td><td class="td" id="td02">2</td><td class="td" id="td03">2</td><td class="td" id="td04">2</td><td class="td" id="td05">2</td><td class="td" id="td06">2</td></tr>
+																																<tr class="tr1"><td class="td" id="td10">2</td><td class="td" id="td11">2</td><td class="td" id="td12">2</td><td class="td" id="td13">2</td><td class="td" id="td14">2</td><td class="td" id="td15">2</td><td class="td" id="td16">2</td></tr>
+																																<tr class="tr2"><td class="td" id="td20">2</td><td class="td" id="td21">2</td><td class="td" id="td22">2</td><td class="td" id="td23">2</td><td class="td" id="td24">2</td><td class="td" id="td25">2</td><td class="td" id="td26">2</td></tr>
+																																<tr class="tr3"><td class="td" id="td30">2</td><td class="td" id="td31">2</td><td class="td" id="td32">2</td><td class="td" id="td33">2</td><td class="td" id="td34">2</td><td class="td" id="td35">2</td><td class="td" id="td36">2</td></tr>
+																																<tr class="tr4"><td class="td" id="td40">2</td><td class="td" id="td41">2</td><td class="td" id="td42">2</td><td class="td" id="td43">2</td><td class="td" id="td44">2</td><td class="td" id="td45">2</td><td class="td" id="td46">2</td></tr>
+																																<tr class="tr5"><td class="td" id="td50">2</td><td class="td" id="td51">2</td><td class="td" id="td52">2</td><td class="td" id="td53">2</td><td class="td" id="td54">2</td><td class="td" id="td55">2</td><td class="td" id="td56">2</td></tr>
+																												</table>
+																								</div>
+																				</div>
+																</div>
+																	
+								</div>
+              
+ <div class="container2">
+  <span  class="spanClass">تاريخ السفر</span>
+  <div class="contOfDate">
+            <div class="dateClick" style="height:100%;" id="dateClick1"><span class="glyphicon glyphicon-calendar dateImage"></span>
+            <span class="dateInp" id="dateInp1">2019 / 03 / 05</span></div>
+            <div class="dateDetails" id="dateDetails1">
+                <div class="headOfDate">
+                    <i class="glyphicon glyphicon-chevron-left dateImage1 back1"></i>
+                    <span id="monthId1">m </span><span id="yearId1"></span>
+                    <i class="glyphicon glyphicon-chevron-right dateImage1 back2"></i>
+                </div>
+                <div class="titleOfDate">
+                    <ul class="listOfDay">
+                        <li>أحد</li>
+                        <li>اثنين</li>
+                        <li>ثلاثاء</li>
+                        <li>اربعاء</li>
+                        <li>خميس</li>
+                        <li>جمعه</li>
+                        <li>سبت</li>
+                    </ul>
+                </div>
+                <div class="tableOfDate">
+                    <table class="tb" id="tb1">
+                        <tr class="tr0"><td class="td" id="td00">2</td><td class="td" id="td01">2</td><td class="td" id="td02">2</td><td class="td" id="td03">2</td><td class="td" id="td04">2</td><td class="td" id="td05">2</td><td class="td" id="td06">2</td></tr>
+                        <tr class="tr1"><td class="td" id="td10">2</td><td class="td" id="td11">2</td><td class="td" id="td12">2</td><td class="td" id="td13">2</td><td class="td" id="td14">2</td><td class="td" id="td15">2</td><td class="td" id="td16">2</td></tr>
+                        <tr class="tr2"><td class="td" id="td20">2</td><td class="td" id="td21">2</td><td class="td" id="td22">2</td><td class="td" id="td23">2</td><td class="td" id="td24">2</td><td class="td" id="td25">2</td><td class="td" id="td26">2</td></tr>
+                        <tr class="tr3"><td class="td" id="td30">2</td><td class="td" id="td31">2</td><td class="td" id="td32">2</td><td class="td" id="td33">2</td><td class="td" id="td34">2</td><td class="td" id="td35">2</td><td class="td" id="td36">2</td></tr>
+                        <tr class="tr4"><td class="td" id="td40">2</td><td class="td" id="td41">2</td><td class="td" id="td42">2</td><td class="td" id="td43">2</td><td class="td" id="td44">2</td><td class="td" id="td45">2</td><td class="td" id="td46">2</td></tr>
+                        <tr class="tr5"><td class="td" id="td50">2</td><td class="td" id="td51">2</td><td class="td" id="td52">2</td><td class="td" id="td53">2</td><td class="td" id="td54">2</td><td class="td" id="td55">2</td><td class="td" id="td56">2</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div><!-- End of container2 -->
+ <input type="hidden" id="thistextSource" name="source" value="">
+	<input type="hidden" id="thistextDestination" name="destination" value="">
+	<input type="hidden" id="thistextDateGo" name="dateGo" value="">
+	<input type="hidden" id="thistextDateReturn" name="dateReturn" value="">
+	<input type="hidden" id="typeOfTrip" name="TripType" value="one">
+ <button style="" id="BtnFindTrips1" type="submit" class="button" name="submit" id="submit"><span class="txtbtn">بحث</span></button>
+</div>
+</div>
+
+				
+			</div><!-- End Of Container1 -->
+		</form>
+		</div>
+
+	
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<section>
+					<header>
+						<h2>Get in touch</h2>
+						<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+					</header>
+					<ul class="contact">
+						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
+						<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="#" class="fa fa-dribbble"><span>Pinterest</span></a></li>
+						<li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+
+
+<!-------------------------------------------------------------------->
+<!-- login form -->
+<div id="id01" class="modalX">
+  
+  <div class="modal-content animate"><!-- form -->
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none';" class="close" title="Close Modal">&times;</span>
+      <span class="glyphicon glyphicon-user" style="font-size:-webkit-xxx-large;"></span>
+    </div>
+
+    <div class="containerX">
+      <label for="username"><b>اسم المستخدم او الايميل</b></label>
+      <input type="text" placeholder="...." name="username" id="userNmaeValue" required>
+						
+      <label for="psw"><b>كلمة السر</b></label>
+      <input type="password" placeholder="....." name="psw" id="passwordLoginValue" required>
+        
+      <button id="btnLogin">دخول</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember">تذكير
+      </label>
+    </div>
+
+    <div class="containerX" style="background-color:#f1f1f1">
+      <!--<button type="button" onclick="document.getElementById('id01').style.display='none';" class="cancelbtn">Cancel</button>-->
+						<span class="psw"><a id="newAccountBtn">حساب جديد؟</a></span>
+      <span class="psw" style="float:left;"><a href="#">هل نسيت كلمة السر؟</a></span>
+    </div>
+  </div><!-- form -->
+</div>
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<!-------------------------------------------------------------------->
+<!-- registeration form -->
+<div id="id02" class="modalOfRegister">
+  
+  <div class="modal-content animate"><!-- form-->
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none';" class="close" title="Close Modal">&times;</span>
+      <span class="glyphicon glyphicon-user" style="font-size:-webkit-xxx-large;"></span>
+    </div>
+
+    <div class="containerOfRegister">
+					 <label for="name"><b>الاسم</b></label>
+      <input type="text" placeholder="...." name="name" id="nameValue" required>
+						
+						<label for="phone"><b>رقم التليفون</b></label>
+      <input type="text" placeholder="...." name="phone" id="phoneValue" required>
+						
+      <label for="email"><b>الايميل</b></label>
+      <input type="text" placeholder="...." name="email" id="emailValue" required>
+						
+      <label for="psw"><b>كلمة السر</b></label>
+      <input type="password" placeholder="....." name="psw" id="passValue" required>
+						
+						<label for="psw"><b>اعادة كتابة كلمة السر</b></label>
+      <input type="password" placeholder="....." name="psw" id="pass2Value" required>
+        
+      <button  id="btnRegister1">تسجيل</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"><span class="txt1">
+									<a href="#" class="txt2 hov1">أوافق على شروط المستخدم</a></span>
+      </label>
+    </div>
+
+    <div class="containerOfRegister" style="background-color:#f1f1f1">
+      <!--<button type="button" onclick="document.getElementById('id01').style.display='none';" class="cancelbtn">Cancel</button>-->
+						<span class="psw"><a id="oldAccountBtn">لديك حساب؟</a></span>
+    </div>
+  </div><!-- form-->
+</div>
+
+
+
+<script src="library/Jquery/jquery-3.3.1.min.js"></script>
+<script src="library/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="js/searchForm/DatePickerJs.js"></script>
+<script src="js/searchForm/DatePickerJs2.js"></script>
+<script src="js/searchForm/searchForm.js"></script>
+<script src="js/searchForm/DropJs.js"></script>
+<script src="js/RegisterForm/registerForm.js"></script>
+<script src="js/LoginForm/LoginForm.js"></script>
+<script src="js/profile/profile.js"></script>
+
+<!--
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>-->
+		
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  
+  <script>
+    // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyBSoocDLqkxTlY96QNN27Jc1RF2bTXJPM0",
+    authDomain: "wasalnylast.firebaseapp.com",
+    databaseURL: "https://wasalnylast.firebaseio.com",
+    projectId: "wasalnylast",
+    storageBucket: "wasalnylast.appspot.com",
+    messagingSenderId: "127072886341",
+    appId: "1:127072886341:web:1eb91762af2fe569"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    
+    // make auth and firestore references
+    const auth = firebase.auth();
+				var database = firebase.database();
+    //const db = firebase.firestore();
+    const functions = firebase.functions();
+
+    // update firestore settings
+    //db.settings({ timestampsInSnapshots: true });
+				
+				 console.log("==============");
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+		
+	</body>
+</html>

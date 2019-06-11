@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Linear by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>-->
+		<link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">
+		
+			
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			
+		<link rel="stylesheet" type="text/css" href="css/formSearchCss/style2.css"><!-- Form Search Style -->
+		<link rel="stylesheet" type="text/css" href="css/formSearchCss/dropStyle.css">
+		<link href="css/formSearchCss/datePickerStyle.css" rel="stylesheet"/>
+	
+		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		<link href="css/profile/profile.css" rel="stylesheet"/>
+	</head>
+	<body class="homepage">
+
+	<!-- Header -->
+		<div id="header">
+			<div id="nav-wrapper"> 
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="active"><a href="index.html">الصفحة الرئيسية  <span class="glyphicon glyphicon-home "</span></a></li>
+						<li><a href="MonthlyBooking.html">الحجز الشهري <i class="glyphicon glyphicon-book"></i></a></li>
+						<li><a id="logoutBtn"> تسجيل خروج <img src="icon.png" width="30px" height="30px"></a></li>
+					</ul>
+				</nav>
+			</div>
+		
+		<div style="" class="modelProfile">
+			<div style="" class="containerProfile">
+				<div style="" class="headProfile">
+					    <div style="" class="headProfileLogo">
+				         <span class="glyphicon glyphicon-user" style="font-size:-webkit-xxx-large;margin:50px;display:inline-block"></span>
+			      </div>
+			      <div style="" class="headProfileContent">
+				        <div class="headProfileContentItem" style="color:#FFF;font-weight:800;font-size:1.5em;line-height: 1em;" id="nameProfile"></div>
+								<div class="headProfileContentItem" style="color:#FFF;font-weight:800;font-size:1.5em;line-height: 1em;" id="emailProfile"></div>
+								<div class="headProfileContentItem" style="color:#FFF;font-weight:800;font-size:1.5em;line-height: 1em;" id="phoneProfile"></div>
+			       </div>
+				</div>
+				
+				<div style="" class="contentProfile">
+				<div style="color:#FFF;font-weight:800;font-size:1.5em;line-height: 1em;">الحجز اليومي</div>
+				<ul id="dailyList">
+				</ul>
+			</div>
+				
+			<div style="" class="contentProfile">
+				<div style="color:#FFF;font-weight:800;font-size:1.5em;line-height: 1em;">الحجز الشهري</div>
+				<ul id="monthlyList">
+				</ul>
+			</div>
+			</div>
+			
+		</div>
+		
+		
+		</div>
+
+	
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<section>
+					<header>
+						<h2>Get in touch</h2>
+						<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+					</header>
+					<ul class="contact">
+						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
+						<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="#" class="fa fa-dribbble"><span>Pinterest</span></a></li>
+						<li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+
+
+
+<script src="library/Jquery/jquery-3.3.1.min.js"></script>
+<script src="library/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="js/searchForm/DatePickerJs.js"></script>
+<script src="js/searchForm/DatePickerJs2.js"></script>
+<script src="js/searchForm/searchForm.js"></script>
+
+<script src="js/profile/profile.js"></script>
+
+<!--
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>-->
+		
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  
+  <script>
+    // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyBSoocDLqkxTlY96QNN27Jc1RF2bTXJPM0",
+    authDomain: "wasalnylast.firebaseapp.com",
+    databaseURL: "https://wasalnylast.firebaseio.com",
+    projectId: "wasalnylast",
+    storageBucket: "wasalnylast.appspot.com",
+    messagingSenderId: "127072886341",
+    appId: "1:127072886341:web:1eb91762af2fe569"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    
+    // make auth and firestore references
+    const auth = firebase.auth();
+				var database = firebase.database();
+    //const db = firebase.firestore();
+    const functions = firebase.functions();
+
+    // update firestore settings
+    //db.settings({ timestampsInSnapshots: true });
+				
+				// console.log("==============");
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+		
+	</body>
+</html>

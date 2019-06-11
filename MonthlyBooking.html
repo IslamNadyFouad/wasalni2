@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Wasalni</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="icon-bus.png" />
+		
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">
+		
+			
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			
+		<link rel="stylesheet" type="text/css" href="css/formSearchCss/style2.css"><!-- Form Search Style -->
+		<link rel="stylesheet" type="text/css" href="css/formSearchCss/dropStyle.css">
+		<link href="css/formSearchCss/datePickerStyle.css" rel="stylesheet"/>
+	 
+			<link href="css/busList/busListCss.css" rel="stylesheet"/>
+		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/formOfRegisterDetails/registerDetailsStyle.css" />
+	<link rel="stylesheet" href="css/ticket/ticketStyle.css" />
+	
+	<link rel="stylesheet" href="css/monthyBooking/dayOfMonthlyBookingStyle.css" />
+	<link rel="stylesheet" href="css/ticket/ticketStyle.css" />
+	<link href="css/loginForm2/loginForm2.css" rel="stylesheet"/>
+		<link href="css/registerationForm/registerationForm.css" rel="stylesheet"/>
+	</head>
+	<body class="homepage">
+
+	<!-- Header -->
+		<div id="header">
+			<div id="nav-wrapper"> 
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="active"><a href="index.html">الصفحة الرئيسية  <span class="glyphicon glyphicon-home "</span></a></li>
+						<li><a id="monthBtn">الحجز الشهري <i class="glyphicon glyphicon-book"></i></a></li>
+					<li><a id="accountBtn"> حسابي <img src="icon.png" width="30px" height="30px"></a></li>
+						<!--<li><a href="no-sidebar.html"> التسجيل <span class="glyphicon glyphicon-log-in"></span></a></li>-->
+					</ul>
+				</nav>
+			</div>
+		
+		
+			<div class="container" style="margin-top:-100px;">
+				
+				
+						<div class="containerOfBusList" style="display:none">
+							<div class="chooseWay">
+					      <div class="return" id="dd0">السبت</div>
+					      <div class="return" id="dd1">الاحد</div>
+								   <div class="return" id="dd2">الاثنين</div>
+								   <div class="return" id="dd3">الثلاثاء</div>
+								   <div class="return" id="dd4">الاربعاء</div>
+								   <div class="return" id="dd5">الخميس</div>
+								   <div class="return" id="dd6">الجمعه</div>
+					    </div>
+					  <div class="headOfBusList" style="display:none">
+				     		 <div class="time">
+													  <div class="day" id="titleOfDay">الاثنين</div>
+												   <div class="date" id="titleOfTrip">30/3/2019</div>
+												</div>
+												 
+													
+								  
+									<div class="img"><i class="fa fa-bus"></i></div>
+								  <div class="place"><div class="f">من <span id="titleOfSource">القاهره</span></div>
+										<div class="t">الي <span id="titleOfDestination">المنيا</spa></div></div>
+					       
+						</div>
+				
+				  <div class="listBus">
+							<div class="elementOfListBus" id="listOfBuses">
+							
+
+							</div><!-- end Of Element -->
+						    
+					</div><!-- end of listBus -->
+				</div>
+				
+			
+		<div class="searchForm" style="width:30%;"><!-- This Is Search Form -->
+					<div class="mainSearchForm">
+					<br>
+         <span style="font-weight:800;font-size:1.5em;line-height: 1em;"> الحجز الشهري </span>
+          
+			<div class="chooseWay" style="display:none"><!-- choose way-->
+             <div  class="wayGo" id="w1" style="cursor:pointer;">ذهاب فقط</div>
+             <div class="wayReturn" id="w2">ذهاب وعودة</div>
+				     	</div>
+          <br><br>
+				  <div class="container2"><!-- Text Input 1-->
+					    <span class="spanClass">الي</span>
+						  <div class="contOfText">
+									<div class="TextClick2" style="height:100%;">
+										 <i class="glyphicon glyphicon-chevron-down arrowImage2" ></i>
+										 <span class="txt" id="ViewTextTo"></span>
+									</div>
+									<div class="textDetails" id="TextTo">
+										  <ul class="listOfRegion" id="listOfDestination">
+												
+											</ul>
+									</div>
+							</div>
+					</div><!-- end of  container2-->
+              
+				  <div class="container2"><!-- Text Input 2-->
+							<span class="spanClass">من</span>
+							<div class="contOfText">
+									<div class="TextClick1" style="height:100%;">
+												  <i class="glyphicon glyphicon-chevron-down arrowImage2" ></i>
+													<span class="txt" id="ViewTextFrom"></span>
+									</div>
+									<div class="textDetails" id="TextFrom">
+											<ul class="listOfRegion" id="listOfSource">
+												
+											</ul>
+									</div>
+							</div>
+					</div><!-- end of  container2-->
+ 
+       <br><br>
+								<div class="container2" id="DateIdVisible">
+										<span  class="spanClass">تاريخ العودة</span>
+										<div class="contOfDate">
+																				<div class="dateClick" style="height:100%;" id="dateClick2"><span class="glyphicon glyphicon-calendar dateImage"></span>
+																				<span class="dateInp" id="dateInp2">2019 / 03 / 05</span></div>
+																				<div class="dateDetails" id="dateDetails2">
+																								<div class="headOfDate">
+																												<i class="glyphicon glyphicon-chevron-left dateImage1 back1"></i>
+																												<span id="monthId2">m </span><span id="yearId2"></span>
+																												<i class="glyphicon glyphicon-chevron-right dateImage1 back2"></i>
+																								</div>
+																								<div class="titleOfDate">
+																												<ul class="listOfDay">
+																																<li>أحد</li>
+																																<li>اثنين</li>
+																																<li>ثلاثاء</li>
+																																<li>اربعاء</li>
+																																<li>خميس</li>
+																																<li>جمعه</li>
+																																<li>سبت</li>
+																												</ul>
+																								</div>
+																								<div class="tableOfDate">
+																												<table class="tb" id="tb2">
+																																<tr class="tr0"><td class="td" id="td00">2</td><td class="td" id="td01">2</td><td class="td" id="td02">2</td><td class="td" id="td03">2</td><td class="td" id="td04">2</td><td class="td" id="td05">2</td><td class="td" id="td06">2</td></tr>
+																																<tr class="tr1"><td class="td" id="td10">2</td><td class="td" id="td11">2</td><td class="td" id="td12">2</td><td class="td" id="td13">2</td><td class="td" id="td14">2</td><td class="td" id="td15">2</td><td class="td" id="td16">2</td></tr>
+																																<tr class="tr2"><td class="td" id="td20">2</td><td class="td" id="td21">2</td><td class="td" id="td22">2</td><td class="td" id="td23">2</td><td class="td" id="td24">2</td><td class="td" id="td25">2</td><td class="td" id="td26">2</td></tr>
+																																<tr class="tr3"><td class="td" id="td30">2</td><td class="td" id="td31">2</td><td class="td" id="td32">2</td><td class="td" id="td33">2</td><td class="td" id="td34">2</td><td class="td" id="td35">2</td><td class="td" id="td36">2</td></tr>
+																																<tr class="tr4"><td class="td" id="td40">2</td><td class="td" id="td41">2</td><td class="td" id="td42">2</td><td class="td" id="td43">2</td><td class="td" id="td44">2</td><td class="td" id="td45">2</td><td class="td" id="td46">2</td></tr>
+																																<tr class="tr5"><td class="td" id="td50">2</td><td class="td" id="td51">2</td><td class="td" id="td52">2</td><td class="td" id="td53">2</td><td class="td" id="td54">2</td><td class="td" id="td55">2</td><td class="td" id="td56">2</td></tr>
+																												</table>
+																								</div>
+																				</div>
+																</div>
+																	
+								</div>
+              
+ <div class="container2">
+  <span  class="spanClass">تاريخ بداية الشهر</span>
+  <div class="contOfDate">
+            <div class="dateClick" style="height:100%;" id="dateClick1"><span class="glyphicon glyphicon-calendar dateImage"></span>
+            <span class="dateInp" id="dateInp1">2019 / 03 / 05</span></div>
+            <div class="dateDetails" id="dateDetails1">
+                <div class="headOfDate">
+                    <i class="glyphicon glyphicon-chevron-left dateImage1 back1"></i>
+                    <span id="monthId1">m </span><span id="yearId1"></span>
+                    <i class="glyphicon glyphicon-chevron-right dateImage1 back2"></i>
+                </div>
+                <div class="titleOfDate">
+                    <ul class="listOfDay">
+                        <li>أحد</li>
+                        <li>اثنين</li>
+                        <li>ثلاثاء</li>
+                        <li>اربعاء</li>
+                        <li>خميس</li>
+                        <li>جمعه</li>
+                        <li>سبت</li>
+                    </ul>
+                </div>
+                <div class="tableOfDate">
+                    <table class="tb" id="tb1">
+                        <tr class="tr0"><td class="td" id="td00">2</td><td class="td" id="td01">2</td><td class="td" id="td02">2</td><td class="td" id="td03">2</td><td class="td" id="td04">2</td><td class="td" id="td05">2</td><td class="td" id="td06">2</td></tr>
+                        <tr class="tr1"><td class="td" id="td10">2</td><td class="td" id="td11">2</td><td class="td" id="td12">2</td><td class="td" id="td13">2</td><td class="td" id="td14">2</td><td class="td" id="td15">2</td><td class="td" id="td16">2</td></tr>
+                        <tr class="tr2"><td class="td" id="td20">2</td><td class="td" id="td21">2</td><td class="td" id="td22">2</td><td class="td" id="td23">2</td><td class="td" id="td24">2</td><td class="td" id="td25">2</td><td class="td" id="td26">2</td></tr>
+                        <tr class="tr3"><td class="td" id="td30">2</td><td class="td" id="td31">2</td><td class="td" id="td32">2</td><td class="td" id="td33">2</td><td class="td" id="td34">2</td><td class="td" id="td35">2</td><td class="td" id="td36">2</td></tr>
+                        <tr class="tr4"><td class="td" id="td40">2</td><td class="td" id="td41">2</td><td class="td" id="td42">2</td><td class="td" id="td43">2</td><td class="td" id="td44">2</td><td class="td" id="td45">2</td><td class="td" id="td46">2</td></tr>
+                        <tr class="tr5"><td class="td" id="td50">2</td><td class="td" id="td51">2</td><td class="td" id="td52">2</td><td class="td" id="td53">2</td><td class="td" id="td54">2</td><td class="td" id="td55">2</td><td class="td" id="td56">2</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div><!-- End of container2 -->
+ <input type="hidden" id="thistextSource2" name="source" value="">
+	<input type="hidden" id="thistextDestination2" name="destination" value="">
+	<input type="hidden" id="thistextDateGo" name="dateGo" value="">
+	<input type="hidden" id="thistextDateReturn" name="dateReturn" value="">
+	<input type="hidden" id="typeOfTrip" name="TripType" value="one">
+ <button style="" id="BtnFindTrips1" class="button" ><span class="txtbtn">بحث</span></button>
+</div>
+</div>
+				<!--<div class="dayOfMonthForm">
+					<div class="allDay">
+						<ul>
+						<li>السبت</li>
+						<li>الاحد</li>
+						<li>الاثنين</li>
+						<li>الثلاثاء</li>
+						<li>الاربعاء</li>
+						<li>الخميس</li>
+							<li>الجمعة</li>
+					</ul>
+					</div>
+					<div class="dayDetails">
+						الرحلات المعروضه هي لكل سبت من كل اسبوع
+						احد ايام
+						<br>10/03/2019<br>17/03/2019<br>24/03/2019<br>31/03/2019<br>
+						يمكنك اختيار الايام من القائمة لاختيار الاتوبيسات
+					</div>
+				</div> -->
+			</div><!-- End Of Container1 -->
+		
+		</div>
+
+	
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<section>
+					<header>
+						<h2>Get in touch</h2>
+						<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+					</header>
+					<ul class="contact">
+						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
+						<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="#" class="fa fa-dribbble"><span>Pinterest</span></a></li>
+						<li><a href="#" class="fa fa-tumblr"><span>Google+</span></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+		<!-- End Of Copyright-->
+		
+		<div class="wrapper fadeInDown">
+    <div id="formContent">
+							<!-- Tabs Titles -->
+								<h2 class="active">بياناتك</h2>
+							<!-- Login Form -->
+							<form>
+									<input type="text" id="login" class="fadeIn second" name="login" placeholder="اسمك">
+									<input type="text" id="password" class="fadeIn third" name="login" placeholder="رقم التليفون">
+									<input type="text" id="login" class="fadeIn second" name="login" placeholder="ايميلك">
+									<input type="submit" class="fadeIn fourth" value="التالي">
+							</form>
+							
+    </div>
+</div>
+		
+		<div class="ticket">
+			<div class="ticketContent">
+				    <div class="headOfTicket"><h2>Wasalni</h2></div>
+								<div class="containerOfTicket">
+									<div class="rightTicket">
+										   <div class="itemOfTicket">من</div>
+													<div class="itemOfTicket">الي</div>
+													<div class="itemOfTicket">التاريخ</div>
+									</div>
+									<div class="leftTicket">
+										   <div class="itemOfTicket">المنيا</div>
+													<div class="itemOfTicket">مغاغه</div>
+													<div class="itemOfTicket">20/03/2019</div>
+									</div>
+								</div>
+								<input type="submit" class="fadeIn fourth" value="التالي">
+			</div>
+		</div>
+		
+		
+		
+		
+		<div id="id00" class="modalY">
+  
+  <div class="modal-content animate"><!--form-->
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id00').style.display='none';" class="close" title="Close Modal">&times;</span>
+      <span class="glyphicon glyphicon-user" style="font-size:-webkit-xxx-large;"></span>
+    </div>
+
+    <div class="containerX">
+      <div class="containerOfTicket">
+									<div class="rightTicket">
+										   <div class="itemOfTicket">من</div>
+													<div class="itemOfTicket">الي</div>
+													<div class="itemOfTicket">تاريخ</div>
+													<div class="itemOfTicket">وقت</div>
+													<div class="itemOfTicket">عدد الكراسي</div>
+									</div>
+									<div class="leftTicket">
+										   <div class="itemOfTicket" id="ts">المنيا</div>
+													<div class="itemOfTicket" id="td">مغاغه</div>
+													<div class="itemOfTicket" id="tdate"></div>
+													<div class="itemOfTicket" id="ttime"></div>
+													<div class="itemOfTicket" id="tcount"></div>
+													<div class="itemOfTicket" style="display:none" id="tBusId"></div>
+									</div>
+								</div>
+      <button id="confirmBtn">تأكيد</button>
+						<button id="confirmBtn2" style="display:none">تأكيد</button>
+    </div>
+
+    <div class="containerX" style="background-color:#f1f1f1">
+      <!--<button type="button" onclick="document.getElementById('id01').style.display='none';" class="cancelbtn">Cancel</button>-->
+						<span></span>
+    </div>
+  </div><!-- form -->
+</div>
+
+<h2><span id="receive"></span></h2>
+<h2><span id="receive2"></span></h2>
+<h2><span id="receive3"></span></h2>
+<h2><span id="receive4"></span></h2>
+
+<script src="library/Jquery/jquery-3.3.1.min.js"></script>
+<script src="library/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="js/searchForm/DatePickerJs.js"></script>
+<script src="js/searchForm/DatePickerJs2.js"></script>
+<script src="js/searchForm/searchForm.js"></script>
+<script src="js/searchForm/DropJs.js"></script>
+
+<script src="js/busList/tableSeatJs.js"></script>
+<script src="js/monthlyBooking/monthlyBooking.js"></script>
+<script src="js/profile/profile.js"></script>
+
+
+   <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  
+  <script>
+    // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyBSoocDLqkxTlY96QNN27Jc1RF2bTXJPM0",
+    authDomain: "wasalnylast.firebaseapp.com",
+    databaseURL: "https://wasalnylast.firebaseio.com",
+    projectId: "wasalnylast",
+    storageBucket: "wasalnylast.appspot.com",
+    messagingSenderId: "127072886341",
+    appId: "1:127072886341:web:1eb91762af2fe569"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="firebase/auth.js"></script>
+	</body>
+</html>

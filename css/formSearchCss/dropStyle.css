@@ -1,0 +1,71 @@
+/*********************************************************************************/
+/* Container Of Dropdowen                                                        */
+/*********************************************************************************/
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText{
+     font-weight:800;font-size:1.2em;line-height: 1.5em;
+     width: 100%;
+     height: 40px;
+     cursor: pointer;
+     border: solid 1px rgb(230,20,230);
+     border-radius: 5px;
+        position: relative;
+        border-bottom-color: rgb(255, 204, 102);
+        /*color:rgba(255, 204, 102,1);*/
+        text-align: left;
+        /*background: rgba(37, 47, 59,0.4);*/
+    border-color: rgba(255, 204, 102,1);
+}
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText > div > .txt{
+    border-style: none;
+    height: 15px;
+    float: right;
+    color:rgba(255, 204, 102,1);
+        padding-top: 8px;
+        padding-right: 10px;
+    padding-bottom: 13px;
+}
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText > div > .arrowImage{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText > div > .arrowImage2{
+    margin-top: 15px;
+    margin-left: 10px;
+    color: rgba(255, 204, 102,1);
+}
+/*********************************************************************************/
+/* List Of Dropdowen                                                             */
+/*********************************************************************************/
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText > .textDetails{
+     width: 170px;
+    max-height: 200px;
+    top:42px;
+    z-index: 1;
+  position: absolute;
+  background-color: #787878;
+  padding: 5px;
+  box-shadow: 0 2px 1px rgba(255, 204, 102, .1);
+  border-radius: 3px;
+  overflow: auto;
+  display: none;
+  color: #ffcc66;
+}
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText > .textDetails > .listOfRegion{
+     margin: 0;
+  padding: 0;
+  list-style: none;
+  direction: rtl;
+}
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText > .textDetails> .listOfRegion li{
+    text-align: right;
+    display:block;
+    width: 95%;
+    padding-right: 10px;
+    background-color: rgba(120,120,120,0.1);
+    margin-bottom: 5px;
+    
+}
+.container > .searchForm > .mainSearchForm > .container2 > .contOfText > .textDetails> .listOfRegion li:hover{
+  background: #ffcc66;
+  color: #FFF;
+}

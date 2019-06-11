@@ -1,0 +1,48 @@
+.dayOfMonthForm{
+    width: 30%;
+    height: auto;
+   
+    float: right;
+    background: rgba(64,64,64,0.5);
+    border-radius: 5px;
+    border: solid 1px rgb(255, 204, 102);
+}
+.allDay{
+    width:auto;
+    height: auto;
+    float: left;
+}
+.allDay ul{
+    list-style-type: none;
+}
+.allDay ul li{
+    width: 150px;
+    height: 40px;
+    background: rgba(64,64,64,0.8);
+    border-bottom: dotted 1px #fff;
+    color: #fff;
+    position: relative;
+    margin-left: -30px;
+     font-size: 15px;
+    font-weight:900;
+     line-height: 2.5em;
+}
+.allDay ul li:first-child{
+    background:rgb(255, 204, 102);
+    margin-top: 10px;
+}
+.allDay ul li:hover{
+    background: rgba(64,64,64,0.6);
+    border: solid 1px #665A15;
+    cursor: pointer;
+}
+.dayDetails{
+     width:49%;
+    height: 100%;
+    float: right;
+    font-size: 15px;
+    font-weight:900;
+    color: #fff;
+     background:rgba(64,64,64,0.2);
+     margin-top: 15%;
+}
