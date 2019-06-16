@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="css/ticket/ticketStyle.css" />
 	<link href="css/loginForm2/loginForm2.css" rel="stylesheet"/>
 		<link href="css/registerationForm/registerationForm.css" rel="stylesheet"/>
+		<link href="css/registerUnUser/registerUnUser.css" rel="stylesheet"/>
 	</head>
 	<body class="homepage">
 
@@ -333,6 +334,28 @@
     </div>
   </div><!-- form -->
 </div>
+		
+	<!--------------------------------->
+<!----alert-->
+<div id="id05" class="modali">
+  
+  <div class="modal-content animate"><!-- form -->
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id05').style.display='none';" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="containeri">
+     
+						الدفع اون لاين بواسطة رقم الحجز
+    </div>
+				<div class="containeri" style="background-color:#f1f1f1">
+     	<div class="psw">رقم الحجز :<span id="bookid1"></span></div>
+							<div class="psw">رقم الحجز 2<span id="bookid2"></span></div>
+    </div>
+
+
+  </div><!-- form -->
+</div>
 
 <h2><span id="receive"></span></h2>
 <h2><span id="receive2"></span></h2>
@@ -374,14 +397,14 @@
     
     // make auth and firestore references
     const auth = firebase.auth();
-    const db = firebase.firestore();
-    const functions = firebase.functions();
+    
+    //const functions = firebase.functions();
 
     // update firestore settings
-    db.settings({ timestampsInSnapshots: true });
+    //db.settings({ timestampsInSnapshots: true });
   </script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="firebase/auth.js"></script>
+  
 	</body>
 </html>

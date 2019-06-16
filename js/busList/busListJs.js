@@ -121,7 +121,7 @@ $( document ).ready(function() {
     
     function f1time(x)
     {
-     if(x<12)
+     if(x<=12)
      {
       return x;
      }
@@ -145,7 +145,7 @@ $( document ).ready(function() {
         var pan="#pan"+i;
         $(pan).append("	<div class='rightPart' id='rightPart"+i+"'></div>");
         var rightPart="#rightPart"+i;
-           $(rightPart).append("<div class='tripInfo'>مدة الرحلة 7 ساعات  |  تاريخ الوصول المتوقع 07:15 صباحا</div>");
+           $(rightPart).append("<div class='tripInfo'>مدة الرحلة "+doc.val().duration+" ساعة </div>");
            $(rightPart).append("<div class='bottomPart' id='bottomPart"+i+"'>");
            var bottomPart="#bottomPart"+i;
                $(bottomPart).append("<div class='seatList'><div class='conatinerOfTable' id='conatinerOfTable"+i+"'> </div></div>");

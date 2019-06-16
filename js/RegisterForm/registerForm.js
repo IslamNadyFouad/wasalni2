@@ -1,33 +1,30 @@
 $(document).ready(function() {
     $("#btnRegister1").click(function() {
-   console.log($("#nameValue").val());
-   console.log($("#emailValue").val());
-   console.log($("#phoneValue").val());
-   console.log($("#passValue").val());
-   
-   if($("#passValue").val()==$("#pass2Value").val())
-   {
-    auth.createUserWithEmailAndPassword($("#emailValue").val(), $("#passValue").val()).then(() => {
-   
-    var userId = firebase.auth().currentUser.uid;
-    firebase.database().ref('Users/' + userId).set({
-    name: $("#nameValue").val(),
-    email: $("#emailValue").val(),
-    phone:$("#phoneValue").val(),
-    password:$("#passValue").val()
-      });
-    
-    
-       });
-    $(".modalOfRegister").css("display","none");
-   // window.location.href = "profile.html";
-   }
-   else
-   {}
+         if($("#passValue").val()==$("#pass2Value").val())
+         {
+               auth.createUserWithEmailAndPassword($("#emailValue").val(), $("#passValue").val()).then(() => {
+               var userId = firebase.auth().currentUser.uid;
+               firebase.database().ref('Users/' + userId).set({
+               name: $("#nameValue").val(),
+               email: $("#emailValue").val(),
+               phone:$("#phoneValue").val(),
+               password:$("#passValue").val()
+                 }).catch(function(error){ alert("this "+error);});
+               
+                  }).catch(function(error){ alert("this "+error);});
+          
+               $(".modalOfRegister").css("display","none");
+          
+         }
+         else
+         {
+            alert("كلمة السر غير متطابقة");
+         }
+        
    
         });
     
-       $("#btnRegister2").click(function() {
+      /* $("#btnRegister2").click(function() {
    
    if($("#passValue").val()==$("#pass2Value").val())
    {
@@ -49,5 +46,7 @@ $(document).ready(function() {
    else
    {}
    
-        });
+        });*/
+       
+       
     });

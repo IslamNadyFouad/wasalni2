@@ -75,7 +75,7 @@ function showList(sourcex,destinationx,day,mydate)
     
     function f1time(x)
     {
-     if(x<12)
+     if(x<=12)
      {
       return x;
      }
@@ -99,7 +99,7 @@ function showList(sourcex,destinationx,day,mydate)
         var pan="#pan"+i;
         $(pan).append("	<div class='rightPart' id='rightPart"+i+"'></div>");
         var rightPart="#rightPart"+i;
-           $(rightPart).append("<div class='tripInfo'>مدة الرحلة 7 ساعات  |  تاريخ الوصول المتوقع 07:15 صباحا</div>");
+           $(rightPart).append("<div class='tripInfo'> مدة الرحلة "+doc.val().duration+" ساعة </div>");
            $(rightPart).append("<div class='bottomPart' id='bottomPart"+i+"'>");
            var bottomPart="#bottomPart"+i;
                $(bottomPart).append("<div class='seatList'><div class='conatinerOfTable' id='conatinerOfTable"+i+"'> </div></div>");
@@ -176,7 +176,7 @@ function showList(sourcex,destinationx,day,mydate)
              $("#td").text(doc.val().destination);
              $("#tdate").text(mydate);
              $("#t2time").text(f1time(doc.val().time_for_go)+" "+f2time(doc.val().time_for_go));
-             $("#ttime").text(doc.val().time_for_go);
+             $("#ttime").text(f1time(doc.val().time_for_go)+" "+f2time(doc.val().time_for_go));
              $("#tBusId").text(doc.key);
             
              $("#tcount").text(numOfBookingSeats);
@@ -433,7 +433,7 @@ function showList(sourcex,destinationx,day,mydate)
          //showList($("#ViewTextTo").text(),$("#ViewTextFrom").text(), "الاثنين","2019-06-10");
          var xx=ArrayOfDay.indexOf(theDayAppear);
           $("#titleOfTrip").text("رحلة العوده");
-         showList($("#ViewTextTo").text(),$("#ViewTextFrom").text(),ArrayOfDay[xx],theStartDate);
+         showList($("#ViewTextTo").text(),$("#ViewTextFrom").text(),ArrayOfDay[xx],TheDateOfDay(theStartDate,xx-1));
          $("#confirmBtn").css("display","none");
           $("#confirmBtn2").css("display","block");
     
@@ -455,7 +455,15 @@ function showList(sourcex,destinationx,day,mydate)
      $('#listOfBuses').empty();
      var xx=ArrayOfDay.indexOf(theDayAppear);
      theDayAppear=ArrayOfDay[xx+1];
-     showList($("#ViewTextFrom").text(),$("#ViewTextTo").text(),ArrayOfDay[xx+1],theStartDate);
+     /*
+     var myDat=theStartDate;
+     var d=new Date(myDat);
+     var yearr=d.getFullYear();
+     var monnn=d.getMonth();
+     var dy=d.getDate();
+     theStartDate=yearr+"-"+setDfM(monnn+1)+"-"+setDfD(dy+1);*/
+     console.log("============ "+TheDateOfDay(theStartDate,xx));
+     showList($("#ViewTextFrom").text(),$("#ViewTextTo").text(),ArrayOfDay[xx+1],TheDateOfDay(theStartDate,xx));
          $("#confirmBtn").css("display","block");
           $("#confirmBtn2").css("display","none");
           var idDay1="#dd"+xx; var idDay2="#dd"+(xx+1);
@@ -467,7 +475,9 @@ function showList(sourcex,destinationx,day,mydate)
        $("#titleOfTrip").text("رحلة الذهاب");
           
           if(xx==6)
-          {setListDay();}
+          {setListDay();
+         
+          }
           
           
   //var userId = firebase.auth().currentUser.uid;
@@ -571,6 +581,8 @@ function showList(sourcex,destinationx,day,mydate)
   
   //$(".headOfBusList").css("display","none");
   $(".containerOfBusList").css("display","none");
+   $("#bookid1").text(discount.key);
+   $(".modali").css("display","block");
  }
  function setWeekDay(year,mon,dat,key)
  {
@@ -625,7 +637,15 @@ function showList(sourcex,destinationx,day,mydate)
     function TheDateOfDay(theStartDate,curDate)
     {
      var da=new Date(theStartDate);var dat=da.getDate();dy=da.getDay();
-     var addD=curDate-dy;
+     var addD=0;
+     if(curDate>=dy)
+     {
+      addD=curDate-dy;
+     }
+     else
+     {
+      addD=(6-dy)+(curDate+1);
+     }
      
     mon=da.getMonth();
    year=da.getFullYear();

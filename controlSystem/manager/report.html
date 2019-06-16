@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="report.css">
+        
+        	
+	
+	
+  <script src="jquery-3.3.1.min.js"></script>
+  
+    </head>
+    <body>
+            <div style="text-align:center"> 
+				<!-- Nav -->
+				<nav id="nav" >
+					<ul>
+						<li class="active"><a href="index.html">Bus Schedule</a></li>
+            <li class="active"><a href="bookingUpdate.html">Booking</a></li>
+            <li class="active"><a href="report.html">Report</a></li>
+					</ul>
+				</nav>
+			</div>
+        <h1>Wasalni</h1>
+        <h1>Report of Booking for the current week</h1>
+
+        
+        
+         <div class="content">
+              <div class="content" style="direction:rtl;background:#f6f6f6;">
+                <ul>
+                <li><span>السبت</span><span id="showDate1"></span><span>الدخل الكلي</span><span id="totalIncome1">0</span></li>
+                </ul>
+              </div>
+            <ul id="cafe-list1">
+              <li><span>من</span><span>الي</span><span>الوقت</span><span>الدخل</span><span>المهدر</span></li>
+            </ul>
+
+        </div>
+        <div class="content">
+              <div class="content" style="direction:rtl;background:#f6f6f6;">
+                <ul>
+                <li><span>الاحد</span><span id="showDate2"></span><span>الدخل الكلي</span><span id="totalIncome2">0</span></li>
+                </ul>
+              </div>
+            <ul id="cafe-list2">
+              <li><span>من</span><span>الي</span><span>الوقت</span><span>الدخل</span><span>المهدر</span></li>
+            </ul>
+
+        </div>
+        <div class="content">
+              <div class="content" style="direction:rtl;background:#f6f6f6;">
+                <ul>
+                <li><span>الاثنين</span><span id="showDate3"></span><span>الدخل الكلي</span><span id="totalIncome3">0</span></li>
+                </ul>
+              </div>
+            <ul id="cafe-list3">
+              <li><span>من</span><span>الي</span><span>الوقت</span><span>الدخل</span><span>المهدر</span></li>
+            </ul>
+
+        </div>
+        <div class="content">
+              <div class="content" style="direction:rtl;background:#f6f6f6;">
+                <ul>
+                <li><span>الثلاثاء</span><span id="showDate4"></span><span>الدخل الكلي</span><span id="totalIncome4">0</span></li>
+                </ul>
+              </div>
+            <ul id="cafe-list4">
+              <li><span>من</span><span>الي</span><span>الوقت</span><span>الدخل</span><span>المهدر</span></li>
+            </ul>
+
+        </div>
+        <div class="content">
+              <div class="content" style="direction:rtl;background:#f6f6f6;">
+                <ul>
+                <li><span>الاربعاء</span><span id="showDate5"></span><span>الدخل الكلي</span><span id="totalIncome5">0</span></li>
+                </ul>
+              </div>
+            <ul id="cafe-list5">
+              <li><span>من</span><span>الي</span><span>الوقت</span><span>الدخل</span><span>المهدر</span></li>
+            </ul>
+
+        </div>
+        <div class="content">
+              <div class="content" style="direction:rtl;background:#f6f6f6;">
+                <ul>
+                <li><span>الخميس</span><span id="showDate6"></span><span>الدخل الكلي</span><span id="totalIncome6">0</span></li>
+                </ul>
+              </div>
+            <ul id="cafe-list6">
+              <li><span>من</span><span>الي</span><span>الوقت</span><span>الدخل</span><span>المهدر</span></li>
+            </ul>
+
+        </div>
+        <div class="content">
+              <div class="content" style="direction:rtl;background:#f6f6f6;">
+                <ul>
+                <li><span>الجمعة</span><span id="showDate7"></span><span>الدخل الكلي</span><span id="totalIncome7">0</span></li>
+                </ul>
+              </div>
+            <ul id="cafe-list7">
+              <li><span>من</span><span>الي</span><span>الوقت</span><span>الدخل</span><span>المهدر</span></li>
+            </ul>
+
+        </div>
+
+<!--------------------------------->
+<!----alert-->
+<div id="id05" class="modali">
+  
+  <div class="modal-content animate"><!-- form -->
+      <div class="imgcontainer">
+         <span onclick="document.getElementById('id05').style.display='none';" class="close" title="Close Modal">&times;</span>
+      </div>
+
+      <div class="containeri">
+            <div id="add-cafe-form">
+                <input type="text" name="name" placeholder="name" id="userN">
+                <input type="text" name="userName" placeholder="user name" id="userUN">
+                
+                <input type="text" name="password" placeholder="password" id="userPA">
+                <button id="updateBtn">تحديث</button>
+            </div>
+						
+      </div>
+  </div><!-- form -->
+</div>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+        <script>
+            // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyBSoocDLqkxTlY96QNN27Jc1RF2bTXJPM0",
+    authDomain: "wasalnylast.firebaseapp.com",
+    databaseURL: "https://wasalnylast.firebaseio.com",
+    projectId: "wasalnylast",
+    storageBucket: "wasalnylast.appspot.com",
+    messagingSenderId: "127072886341",
+    appId: "1:127072886341:web:1eb91762af2fe569"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+           // const db = firebase.firestore();
+           // db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="report.js"></script>
+    </body>
+</html>

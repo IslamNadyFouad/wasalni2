@@ -93,13 +93,14 @@ ul{
 .lii span{
     display: inline-block;
     margin: 10px;
-    width: 76px;
+    width: 100px;
 }
 
 .lii span:nth-child(2){
     font-size: 16px;
     margin-top: 6px;
     color: #999;
+    width: 100px;
 }
 
 .lii div{

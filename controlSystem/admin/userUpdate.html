@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles2.css">
+    </head>
+    <body>
+            <div style="text-align:center"> 
+				<!-- Nav -->
+				<nav id="nav" >
+					<ul>
+						<li class="active"><a href="index.html">Bus Schedule</a></li>
+            <li class="active"><a href="userUpdate.html">User</a></li>
+            <li class="active"><a href="staff.html">Staff</a></li>
+            <li class="active"><a href="manager.html">Manager</a></li>
+            <li class="active"><a href="admin.html">Admin</a></li>
+					</ul>
+				</nav>
+			</div>
+        <h1>Wasalni</h1>
+        <h1>Manage User</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                <input type="text" name="Nuser" placeholder="name">
+                <input type="text" name="Euser" placeholder="email">
+                <input type="text" name="PHuser" placeholder="phone">
+                <input type="text" name="PAuser" placeholder="password">
+                <button>اضافة</button>
+            </form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+
+<!--------------------------------->
+<!----alert-->
+<div id="id05" class="modali">
+  
+  <div class="modal-content animate"><!-- form -->
+      <div class="imgcontainer">
+         <span onclick="document.getElementById('id05').style.display='none';" class="close" title="Close Modal">&times;</span>
+      </div>
+
+      <div class="containeri">
+            <div id="add-cafe-form">
+                <input type="text" name="busid" placeholder="id" id="userN">
+                <input type="text" name="day" placeholder="day" id="userE">
+                <input type="text" name="destinationEn" placeholder="To" id="userPH">
+                <input type="text" name="destinationAr" placeholder="الي" id="userPA">
+                <button id="updateBtn">تحديث</button>
+            </div>
+						
+      </div>
+  </div><!-- form -->
+</div>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+        <script>
+            // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyBSoocDLqkxTlY96QNN27Jc1RF2bTXJPM0",
+    authDomain: "wasalnylast.firebaseapp.com",
+    databaseURL: "https://wasalnylast.firebaseio.com",
+    projectId: "wasalnylast",
+    storageBucket: "wasalnylast.appspot.com",
+    messagingSenderId: "127072886341",
+    appId: "1:127072886341:web:1eb91762af2fe569"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+           // const db = firebase.firestore();
+           // db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="app2.js"></script>
+    </body>
+</html>
